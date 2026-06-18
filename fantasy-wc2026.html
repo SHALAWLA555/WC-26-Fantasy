@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Fantasy WC 2026 — Squad Assistant</title>
+
+<!-- PWA Home screen icon -->
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="WC26 Fantasy">
+<meta name="application-name" content="WC26 Fantasy">
+<meta name="theme-color" content="#1a6b3a">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap');
+
+  :root {
+    --pitch: #1a6b3a;
+    --pitch-light: #228B4E;
+    --pitch-dark: #0e3d21;
+    --gold: #F5A623;
+    --gold-light: #FFD07A;
+    --danger: #E53E3E;
+    --warning: #DD8B00;
+    --safe: #38A169;
+    --info: #3182CE;
+    --bg: #0d1117;
+    --bg2: #161b22;
+    --bg3: #21262d;
+    --bg4: #30363d;
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --text: #e6edf3;
+    --text2: #8b949e;
+    --text3: #6e7681;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --radius-lg: 18px;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .app {
+    max-width: 430px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: var(--bg);
+    position: relative;
+    padding-bottom: 80px;
+  }
+
+  /* === TOP BAR === */
+  .topbar {
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 18px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .topbar-logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--gold);
+  }
+  .topbar-logo span { color: var(--text); }
+  .topbar-right { display:flex; gap:10px; align-items:center; }
+  .notif-btn {
+    width:36px; height:36px;
+    border-radius:50%;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    font-size:17px;
+  }
+  .notif-badge {
+    position:absolute; top:4px; right:4px;
+    width:9px; height:9px;
+    background:var(--danger);
+    border-radius:50%;
+    border:2px solid var(--bg2);
+  }
+  .budget-chip {
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  /* === BOTTOM NAV === */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 430px;
+    max-width: 100%;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    display: flex;
+    z-index: 100;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .nav-item {
+    flex: 1;
+    padding: 10px 0 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--text3);
+    font-size: 10px;
+    font-weight: 500;
+    transition: color 0.15s;
+  }
+  .nav-item.active { color: var(--gold); }
+  .nav-item svg { width:22px; height:22px; }
+
+  /* === SCREENS === */
+  .screen { display:none; padding: 0 0 8px; }
+  .screen.active { display:block; }
+
+  /* === SECTION HEADERS === */
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 18px 10px;
+  }
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text2);
+  }
+  .section-action {
+    font-size: 12px;
+    color: var(--gold);
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  /* === HERO RECOMMENDATION === */
+  .hero-card {
+    margin: 12px 14px 0;
+    background: linear-gradient(135deg, var(--pitch-dark) 0%, var(--pitch) 60%, var(--pitch-light) 100%);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .hero-card::before {
+    content:'';
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    border-radius: inherit;
+  }
+  .hero-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    opacity: 0.85;
+    margin-bottom: 4px;
+  }
+  .hero-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .meta-chip {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .meta-chip.gold { background: rgba(245,166,35,0.25); border-color: rgba(245,166,35,0.4); color: var(--gold-light); }
+  .ai-reason {
+    background: rgba(0,0,0,0.25);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+    border-left: 3px solid var(--gold);
+  }
+  .ai-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .ai-dot { width:6px; height:6px; background:var(--gold); border-radius:50%; animation: pulse 1.5s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  /* === PLAYER CARDS === */
+  .players-scroll {
+    padding: 0 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .player-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: border-color 0.15s;
+    cursor: pointer;
+  }
+  .player-card:hover { border-color: var(--border2); }
+  .player-card.captain { border-color: rgba(245,166,35,0.4); background: rgba(245,166,35,0.05); }
+  .player-card.vice { border-color: rgba(100,180,255,0.3); background: rgba(100,180,255,0.04); }
+  .player-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--bg3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    border: 2px solid var(--border2);
+    position: relative;
+  }
+  .captain-badge, .vice-badge {
+    position: absolute;
+    bottom: -2px; right: -2px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 800;
+    border: 2px solid var(--bg2);
+  }
+  .captain-badge { background: var(--gold); color: #000; }
+  .vice-badge { background: var(--info); color: #fff; }
+  .player-info { flex: 1; min-width: 0; }
+  .player-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .player-sub {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+  }
+  .player-nation {
+    font-size: 11px;
+    color: var(--text2);
+  }
+  .pos-badge {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .pos-gk { background: rgba(255,165,0,0.15); color: #FFA500; }
+  .pos-def { background: rgba(56,161,105,0.15); color: #48BB78; }
+  .pos-mid { background: rgba(49,130,206,0.15); color: #63B3ED; }
+  .pos-fwd { background: rgba(229,62,62,0.15); color: #FC8181; }
+  .player-right { display:flex; flex-direction:column; align-items:flex-end; gap:4px; }
+  .player-score {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .player-price {
+    font-size: 11px;
+    color: var(--text2);
+    font-weight: 500;
+  }
+  .status-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .status-dot.green { background: var(--safe); }
+  .status-dot.yellow { background: var(--warning); }
+  .status-dot.red { background: var(--danger); }
+
+  /* === RISK FLAGS === */
+  .flags { display:flex; gap:4px; flex-wrap:wrap; margin-top:3px; }
+  .flag {
+    font-size: 9px;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 3px;
+    letter-spacing: 0.03em;
+  }
+  .flag-injury { background:rgba(229,62,62,0.15); color:#FC8181; }
+  .flag-yellow { background:rgba(221,139,0,0.15); color:#F6AD55; }
+  .flag-rotation { background:rgba(49,130,206,0.15); color:#90CDF4; }
+  .flag-form { background:rgba(56,161,105,0.15); color:#68D391; }
+  .flag-fixture { background:rgba(159,122,234,0.15); color:#B794F4; }
+
+  /* === FORMATION PITCH === */
+  .pitch-container {
+    margin: 0 14px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .pitch-header {
+    padding: 14px 16px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+  }
+  .pitch-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text);
+  }
+  .formation-badge {
+    background: var(--pitch-dark);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+  }
+  .pitch-field {
+    background: linear-gradient(180deg, #1a6b3a 0%, #1e7a43 50%, #1a6b3a 100%);
+    padding: 16px 8px;
+    position: relative;
+  }
+  .pitch-lines {
+    position:absolute;
+    top:0;left:0;right:0;bottom:0;
+    pointer-events:none;
+  }
+  .pitch-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .pitch-row:last-child { margin-bottom: 0; }
+  .pitch-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    min-width: 52px;
+  }
+  .pitch-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    position: relative;
+  }
+  .pitch-avatar.captain-a { border-color: var(--gold); box-shadow: 0 0 8px rgba(245,166,35,0.5); }
+  .pitch-captain-b {
+    position:absolute; bottom:-2px; right:-2px;
+    width:16px; height:16px;
+    background:var(--gold);
+    border-radius:50%;
+    font-size:8px;
+    font-weight:800;
+    color:#000;
+    display:flex;align-items:center;justify-content:center;
+    border:2px solid var(--pitch);
+  }
+  .pitch-name {
+    font-size: 9px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    line-height: 1.2;
+    max-width: 52px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  }
+  .pitch-score-sm {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--gold-light);
+    font-family: 'Oswald', sans-serif;
+  }
+
+  /* === NEWS CARDS === */
+  .news-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    margin: 0 14px 8px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+  }
+  .news-card:hover { border-color: var(--border2); }
+  .news-tag {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+  }
+  .tag-injury { background:rgba(229,62,62,0.15); color:#FC8181; }
+  .tag-lineup { background:rgba(56,161,105,0.15); color:#68D391; }
+  .tag-transfer { background:rgba(245,166,35,0.15); color:var(--gold); }
+  .tag-match { background:rgba(49,130,206,0.15); color:#90CDF4; }
+  .tag-general { background:rgba(255,255,255,0.08); color:var(--text2); }
+  .news-headline {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+  .news-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .news-source { font-size: 11px; color: var(--text3); }
+  .news-time { font-size: 11px; color: var(--text3); }
+  .news-impact {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+    padding: 6px 8px;
+    background: var(--bg3);
+    border-radius: 6px;
+    font-size: 11px;
+    color: var(--text2);
+  }
+  .impact-icon { font-size: 13px; }
+
+  /* === STATS SCREEN === */
+  .stat-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin: 0 14px 8px;
+    overflow: hidden;
+  }
+  .stat-card-header {
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .stat-avatar-lg {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--bg3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    border: 2px solid var(--border2);
+  }
+  .stat-player-info { flex:1; }
+  .stat-player-name { font-size: 15px; font-weight: 700; color:var(--text); }
+  .stat-player-team { font-size: 12px; color:var(--text2); margin-top:2px; }
+  .stat-score-lg {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .stat-bars { padding: 12px 14px; }
+  .stat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .stat-label { font-size: 11px; color:var(--text2); width:90px; flex-shrink:0; }
+  .stat-bar-bg {
+    flex:1;
+    height:6px;
+    background:var(--bg3);
+    border-radius:3px;
+    overflow:hidden;
+  }
+  .stat-bar-fill {
+    height:100%;
+    border-radius:3px;
+    transition: width 0.6s ease;
+  }
+  .bar-gold { background: var(--gold); }
+  .bar-green { background: var(--safe); }
+  .bar-blue { background: var(--info); }
+  .bar-red { background: var(--danger); }
+  .stat-val { font-size:11px; font-weight:600; color:var(--text); width:28px; text-align:right; }
+
+  /* === BOOSTER CARDS === */
+  .booster-row {
+    display: flex;
+    gap: 8px;
+    padding: 0 14px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .booster-row::-webkit-scrollbar { display:none; }
+  .booster-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px;
+    min-width: 120px;
+    flex-shrink: 0;
+    cursor:pointer;
+    transition: border-color 0.15s, transform 0.1s;
+  }
+  .booster-card:hover { border-color:var(--border2); transform:translateY(-1px); }
+  .booster-card.recommended { border-color: rgba(245,166,35,0.5); background: rgba(245,166,35,0.06); }
+  .booster-icon { font-size: 24px; margin-bottom: 6px; }
+  .booster-name { font-size: 12px; font-weight: 700; color:var(--text); margin-bottom:3px; }
+  .booster-desc { font-size: 10px; color:var(--text2); line-height:1.4; }
+  .booster-rec-label {
+    display:inline-block;
+    font-size:9px;
+    font-weight:700;
+    color:var(--gold);
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    margin-top:6px;
+  }
+
+  /* === SETTINGS SCREEN === */
+  .settings-section {
+    margin: 0 14px 16px;
+  }
+  .settings-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 8px;
+    padding: 0 2px;
+  }
+  .setting-row {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 13px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1px;
+    cursor:pointer;
+  }
+  .setting-row:first-of-type { border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+  .setting-row:last-of-type { border-radius: 0 0 var(--radius-sm) var(--radius-sm); margin-bottom:0; }
+  .setting-name { font-size:14px; color:var(--text); font-weight:500; }
+  .setting-val { font-size:13px; color:var(--text2); display:flex;align-items:center;gap:6px; }
+  .toggle {
+    width:40px; height:22px;
+    background: var(--safe);
+    border-radius:11px;
+    position:relative;
+    cursor:pointer;
+    transition:background 0.2s;
+  }
+  .toggle::after {
+    content:'';
+    position:absolute;
+    width:18px; height:18px;
+    background:#fff;
+    border-radius:50%;
+    top:2px; right:2px;
+    transition:right 0.2s;
+  }
+  .toggle.off { background:var(--bg4); }
+  .toggle.off::after { right:20px; }
+
+  /* === NOTIFICATION PANEL === */
+  .notif-overlay {
+    display:none;
+    position:fixed;
+    top:0;left:0;right:0;bottom:0;
+    background:rgba(0,0,0,0.6);
+    z-index:200;
+    align-items:flex-start;
+    justify-content:flex-end;
+  }
+  .notif-overlay.show { display:flex; }
+  .notif-panel {
+    width:320px;
+    max-height:80vh;
+    margin:60px 0 0;
+    background:var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:0 8px 32px rgba(0,0,0,0.5);
+  }
+  .notif-panel-header {
+    padding:14px 16px;
+    border-bottom:1px solid var(--border);
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .notif-panel-title { font-size:15px; font-weight:700; color:var(--text); }
+  .notif-close { font-size:18px; cursor:pointer; color:var(--text2); }
+  .notif-item {
+    padding:12px 16px;
+    border-bottom:1px solid var(--border);
+    display:flex;gap:10px;align-items:flex-start;
+  }
+  .notif-item.unread { background:rgba(245,166,35,0.04); }
+  .notif-ico { font-size:20px; flex-shrink:0; margin-top:1px; }
+  .notif-text { flex:1; }
+  .notif-title { font-size:13px; font-weight:600; color:var(--text); margin-bottom:2px; }
+  .notif-body { font-size:12px; color:var(--text2); line-height:1.4; }
+  .notif-time { font-size:10px; color:var(--text3); margin-top:3px; }
+
+  /* === LOADING AI === */
+  .ai-loading {
+    display:flex;align-items:center;gap:8px;
+    padding:10px 14px;
+    background:var(--bg3);
+    border-radius:var(--radius-sm);
+    margin:0 14px 10px;
+    font-size:12px;
+    color:var(--text2);
+  }
+  .ai-spinner {
+    width:16px;height:16px;
+    border:2px solid var(--border);
+    border-top-color:var(--gold);
+    border-radius:50%;
+    animation:spin 0.7s linear infinite;
+    flex-shrink:0;
+  }
+  @keyframes spin { to { transform:rotate(360deg); } }
+
+  /* === DAILY DEADLINE === */
+  .deadline-bar {
+    margin: 10px 14px 0;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 9px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .deadline-label { font-size:11px; color:var(--text2); }
+  .deadline-time { font-size:12px; font-weight:700; color:var(--danger); font-family:'Oswald',sans-serif; letter-spacing:0.04em; }
+
+  /* === SCROLL SNAP NEWS === */
+  .news-highlight-row {
+    display:flex; gap:8px;
+    padding:0 14px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    margin-bottom:12px;
+  }
+  .news-highlight-row::-webkit-scrollbar { display:none; }
+  .news-highlight-card {
+    min-width:200px;
+    background:var(--bg2);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:12px;
+    flex-shrink:0;
+  }
+  .nhl-emoji { font-size:22px; margin-bottom:6px; }
+  .nhl-text { font-size:12px; font-weight:600; color:var(--text); line-height:1.4; }
+  .nhl-sub { font-size:10px; color:var(--text2); margin-top:4px; }
+
+  /* === MATCH CARDS === */
+  .match-card {
+    background:var(--bg2);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    margin:0 14px 8px;
+    padding:12px 14px;
+  }
+  .match-row {
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .match-team {
+    flex:1;
+    font-size:13px; font-weight:600; color:var(--text);
+    display:flex;align-items:center;gap:6px;
+  }
+  .match-team.right { justify-content:flex-end; text-align:right; }
+  .match-vs {
+    font-size:11px; color:var(--text3);
+    padding:0 8px;
+    flex-shrink:0;
+  }
+  .match-score {
+    font-family:'Oswald',sans-serif;
+    font-size:18px; font-weight:700;
+    padding:0 4px;
+    color:var(--text);
+  }
+  .match-score.live { color:var(--danger); }
+  .match-status {
+    text-align:center;
+    font-size:10px;
+    color:var(--text3);
+    margin-top:6px;
+  }
+  .live-dot {
+    display:inline-block;
+    width:6px;height:6px;
+    background:var(--danger);
+    border-radius:50%;
+    margin-right:4px;
+    animation:pulse 1s infinite;
+  }
+  .match-players-imp {
+    margin-top:8px;
+    padding-top:8px;
+    border-top:1px solid var(--border);
+    font-size:11px;color:var(--text2);
+  }
+
+  /* === TABS === */
+  .tabs {
+    display:flex;
+    padding:0 14px;
+    gap:4px;
+    margin-bottom:12px;
+  }
+  .tab {
+    padding:7px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+    color:var(--text2);
+    background:var(--bg3);
+    border:1px solid var(--border);
+    cursor:pointer;
+    white-space:nowrap;
+    transition:all 0.15s;
+  }
+  .tab.active {
+    background:var(--gold);
+    color:#000;
+    border-color:var(--gold);
+  }
+
+  /* === BUDGET BAR === */
+  .budget-bar-card {
+    margin:10px 14px 0;
+    background:var(--bg2);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:14px;
+  }
+  .budget-bar-header { display:flex;justify-content:space-between;margin-bottom:8px; }
+  .budget-bar-label { font-size:12px;color:var(--text2); }
+  .budget-bar-val { font-size:13px;font-weight:700;color:var(--gold); }
+  .budget-bar-bg { height:8px;background:var(--bg3);border-radius:4px;overflow:hidden; }
+  .budget-bar-fill { height:100%;background:var(--gold);border-radius:4px;transition:width 0.5s; }
+
+  /* Animate in */
+  @keyframes slideUp {
+    from { transform:translateY(10px); opacity:0; }
+    to { transform:translateY(0); opacity:1; }
+  }
+  .player-card, .news-card, .stat-card, .match-card {
+    animation: slideUp 0.25s ease both;
+  }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-logo">WC<span>26</span> Fantasy</div>
+    <div class="topbar-right">
+      <div class="budget-chip" id="budgetDisplay">$100M</div>
+      <div class="notif-btn" onclick="toggleNotifications()">
+        🔔
+        <div class="notif-badge" id="notifBadge"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREENS -->
+
+  <!-- ===== HOME SCREEN ===== -->
+  <div class="screen active" id="screen-home">
+
+    <div class="deadline-bar">
+      <span class="deadline-label">⚡ Next deadline</span>
+      <span class="deadline-time" id="countdown">02:34:17</span>
+    </div>
+
+    <div class="section-header">
+      <div class="section-title">Today's squad</div>
+      <div class="section-action" onclick="refreshRecommendation()">↻ Refresh AI</div>
+    </div>
+
+    <div id="aiLoadingBar" class="ai-loading" style="display:none">
+      <div class="ai-spinner"></div>
+      <span>AI analyzing today's fixtures and player data…</span>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero-card">
+      <div class="hero-label">⚽ AI Recommendation — Day 12</div>
+      <div class="hero-title">Attack-heavy 4-3-3</div>
+      <div class="hero-meta">
+        <div class="meta-chip">15 players selected</div>
+        <div class="meta-chip">$98.4M spent</div>
+        <div class="meta-chip gold">⭐ Captain: Mbappé</div>
+      </div>
+      <div class="ai-reason">
+        <div class="ai-label"><div class="ai-dot"></div> AI Analysis</div>
+        France face Tunisia today — strong attack potential. Mbappé has scored in 4 of his last 5 World Cup games. Salah and Vinicius Jr also offer huge ceiling. All 3 key defenders have clean-sheet odds above 60%.
+      </div>
+    </div>
+
+    <!-- BUDGET BAR -->
+    <div class="budget-bar-card">
+      <div class="budget-bar-header">
+        <span class="budget-bar-label">Budget used</span>
+        <span class="budget-bar-val">$98.4M / $100M</span>
+      </div>
+      <div class="budget-bar-bg"><div class="budget-bar-fill" style="width:98.4%"></div></div>
+    </div>
+
+    <div class="section-header">
+      <div class="section-title">Boosters</div>
+      <div class="section-action">View all</div>
+    </div>
+
+    <div class="booster-row">
+      <div class="booster-card recommended">
+        <div class="booster-icon">⚡</div>
+        <div class="booster-name">Maximum Captain</div>
+        <div class="booster-desc">Your highest scorer automatically gets 2x points</div>
+        <div class="booster-rec-label">★ Recommended today</div>
+      </div>
+      <div class="booster-card">
+        <div class="booster-icon">🔄</div>
+        <div class="booster-name">Wildcard</div>
+        <div class="booster-desc">Unlimited transfers one round (not MD1 / R32)</div>
+      </div>
+      <div class="booster-card">
+        <div class="booster-icon">🦸</div>
+        <div class="booster-name">12th Man</div>
+        <div class="booster-desc">Extra player scores — ignores budget &amp; nation limits</div>
+      </div>
+      <div class="booster-card">
+        <div class="booster-icon">🎯</div>
+        <div class="booster-name">Qualification</div>
+        <div class="booster-desc">+2 per starter if their team advances (R32+)</div>
+      </div>
+      <div class="booster-card">
+        <div class="booster-icon">🎁</div>
+        <div class="booster-name">Mystery</div>
+        <div class="booster-desc">Revealed after Round 3 — one knockout round</div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <div class="section-title">Starting XI</div>
+      <div class="section-action" onclick="showTab('squad')">View formation</div>
+    </div>
+
+    <div class="players-scroll" id="startingXIList"></div>
+
+    <div class="section-header">
+      <div class="section-title">Bench</div>
+    </div>
+    <div class="players-scroll" id="benchList"></div>
+
+    <div class="section-header">
+      <div class="section-title">Transfer advice</div>
+    </div>
+
+    <div class="news-card" style="margin-bottom:0">
+      <div class="news-tag tag-transfer">↕ Transfer In</div>
+      <div class="news-headline">Bring in Bukayo Saka — England vs Panama is a dream fixture</div>
+      <div class="news-impact">
+        <span class="impact-icon">📈</span>
+        <span>Replaces Leroy Sané (rotation risk). $7.5M price. Expected to start and take set pieces.</span>
+      </div>
+    </div>
+    <div style="height:8px"></div>
+    <div class="news-card">
+      <div class="news-tag tag-injury">↕ Transfer Out</div>
+      <div class="news-headline">Sell Leroy Sané — confirmed rotation risk vs Morocco</div>
+      <div class="news-impact">
+        <span class="impact-icon">📉</span>
+        <span>Flick likely to rest Sané. Frees up $8.5M. Don't wait — prices will drop.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== SQUAD / FORMATION SCREEN ===== -->
+  <div class="screen" id="screen-squad">
+
+    <div class="section-header">
+      <div class="section-title">Your squad</div>
+      <div class="section-action" onclick="refreshRecommendation()">↻ AI Pick</div>
+    </div>
+
+    <!-- PITCH VIEW -->
+    <div class="pitch-container">
+      <div class="pitch-header">
+        <div class="pitch-title">Formation view</div>
+        <div class="formation-badge">4-3-3</div>
+      </div>
+      <div class="pitch-field" id="pitchField"></div>
+    </div>
+
+    <div class="section-header" style="margin-top:12px">
+      <div class="section-title">Full squad — 15 players</div>
+    </div>
+    <div class="players-scroll" id="fullSquadList"></div>
+
+  </div>
+
+  <!-- ===== NEWS SCREEN ===== -->
+  <div class="screen" id="screen-news">
+
+    <div class="section-header">
+      <div class="section-title">WC2026 news</div>
+      <div class="section-action" onclick="fetchNews()">↻ Refresh</div>
+    </div>
+
+    <div style="display:flex;overflow-x:auto;gap:4px;padding:0 14px 10px;scrollbar-width:none">
+      <div class="tab active" onclick="filterNews('all', this)">All</div>
+      <div class="tab" onclick="filterNews('injury', this)">Injuries</div>
+      <div class="tab" onclick="filterNews('lineup', this)">Lineups</div>
+      <div class="tab" onclick="filterNews('match', this)">Matches</div>
+      <div class="tab" onclick="filterNews('transfer', this)">Transfers</div>
+    </div>
+
+    <div id="newsHighlights" class="news-highlight-row"></div>
+    <div id="newsFeed"></div>
+
+  </div>
+
+  <!-- ===== STATS SCREEN ===== -->
+  <div class="screen" id="screen-stats">
+
+    <div class="section-header">
+      <div class="section-title">Player stats</div>
+    </div>
+
+    <div style="display:flex;overflow-x:auto;gap:4px;padding:0 14px 10px;scrollbar-width:none">
+      <div class="tab active" onclick="filterStats('my', this)">My players</div>
+      <div class="tab" onclick="filterStats('top', this)">Top scorers</div>
+      <div class="tab" onclick="filterStats('gk', this)">Goalkeepers</div>
+      <div class="tab" onclick="filterStats('def', this)">Defenders</div>
+      <div class="tab" onclick="filterStats('mid', this)">Midfielders</div>
+      <div class="tab" onclick="filterStats('fwd', this)">Forwards</div>
+    </div>
+
+    <div id="statsList"></div>
+
+    <div class="section-header" style="margin-top:4px">
+      <div class="section-title">Live matches</div>
+    </div>
+    <div id="matchesList"></div>
+
+  </div>
+
+  <!-- ===== SETTINGS SCREEN ===== -->
+  <div class="screen" id="screen-settings">
+
+    <div class="section-header">
+      <div class="section-title">Settings</div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-label">Fantasy rules</div>
+      <div class="setting-row">
+        <span class="setting-name">Budget</span>
+        <span class="setting-val">$100M <span style="color:var(--text3)">›</span></span>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Squad size</span>
+        <span class="setting-val">15 players <span style="color:var(--text3)">›</span></span>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Free transfers / week</span>
+        <span class="setting-val">1 <span style="color:var(--text3)">›</span></span>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Max players per nation</span>
+        <span class="setting-val">3 <span style="color:var(--text3)">›</span></span>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-label">Notifications</div>
+      <div class="setting-row">
+        <span class="setting-name">Daily recommendation</span>
+        <div class="toggle" onclick="this.classList.toggle('off')"></div>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Injury alerts</span>
+        <div class="toggle" onclick="this.classList.toggle('off')"></div>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Lineup announcements</span>
+        <div class="toggle" onclick="this.classList.toggle('off')"></div>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Deadline reminders</span>
+        <div class="toggle" onclick="this.classList.toggle('off')"></div>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Transfer alerts</span>
+        <div class="toggle" onclick="this.classList.toggle('off')"></div>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-label">AI preferences</div>
+      <div class="setting-row">
+        <span class="setting-name">Prefer safe picks</span>
+        <div class="toggle off" onclick="this.classList.toggle('off')"></div>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Differential picks</span>
+        <div class="toggle" onclick="this.classList.toggle('off')"></div>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Prioritize clean sheets</span>
+        <div class="toggle off" onclick="this.classList.toggle('off')"></div>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-label">Telegram alerts</div>
+      <div class="setting-row" style="flex-direction:column;align-items:flex-start;gap:8px">
+        <span class="setting-name">Bot token</span>
+        <input type="password" placeholder="123456:ABC-DEF…" onchange="saveTelegramToken(this.value)" id="tgTokenInput" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:9px 12px;font-size:12px;color:var(--text);outline:none;font-family:Inter,sans-serif;">
+        <span style="font-size:11px;color:var(--text3)">Create a bot: message @BotFather on Telegram → /newbot</span>
+      </div>
+      <div class="setting-row" style="flex-direction:column;align-items:flex-start;gap:8px">
+        <span class="setting-name">Chat ID</span>
+        <input type="text" placeholder="e.g. 123456789" onchange="saveTelegramChat(this.value)" id="tgChatInput" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:9px 12px;font-size:12px;color:var(--text);outline:none;font-family:Inter,sans-serif;">
+        <span style="font-size:11px;color:var(--text3)">Get it: message @userinfobot on Telegram</span>
+      </div>
+      <div class="setting-row" onclick="testTelegram()" style="cursor:pointer">
+        <span class="setting-name">Send test message</span>
+        <span class="setting-val" style="color:#2AABEE">Test ›</span>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-label">Claude AI</div>
+      <div class="setting-row" style="flex-direction:column;align-items:flex-start;gap:8px">
+        <span class="setting-name">Anthropic API key</span>
+        <input id="apiKeyInput" type="password" placeholder="sk-ant-api03-…" onchange="saveApiKey(this.value)" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:9px 12px;font-size:12px;color:var(--text);outline:none;font-family:Inter,sans-serif;">
+        <span style="font-size:11px;color:var(--text3)">Get your free key at console.anthropic.com · Stored locally only</span>
+      </div>
+      <div class="setting-row" onclick="refreshRecommendation()" style="cursor:pointer">
+        <span class="setting-name">Run AI analysis now</span>
+        <span class="setting-val" style="color:var(--gold)">Analyze ›</span>
+      </div>
+    </div>
+
+        <div class="settings-section">
+      <div class="settings-label">Data &amp; account</div>
+      <div class="setting-row">
+        <span class="setting-name">Sync player prices</span>
+        <span class="setting-val">Manual <span style="color:var(--text3)">›</span></span>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Data source</span>
+        <span class="setting-val">API-Football <span style="color:var(--text3)">›</span></span>
+      </div>
+      <div class="setting-row">
+        <span class="setting-name">Friends &amp; league</span>
+        <span class="setting-val">Share link <span style="color:var(--text3)">›</span></span>
+      </div>
+    </div>
+
+    <div style="padding:0 14px 20px;text-align:center">
+      <div style="font-size:11px;color:var(--text3);line-height:1.6">
+        Fantasy WC2026 Squad Assistant<br>
+        Powered by Claude AI · FIFA World Cup 2026<br>
+        Data: API-Football · News: NewsAPI
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" onclick="showTab('home')" id="nav-home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/>
+      </svg>
+      Home
+    </button>
+    <button class="nav-item" onclick="showTab('squad')" id="nav-squad">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+        <path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M5 12h2m10 0h2M12 5v2m0 10v2"/>
+      </svg>
+      Squad
+    </button>
+    <button class="nav-item" onclick="showTab('news')" id="nav-news">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a4 4 0 01-4-4V6"/>
+        <path d="M10 7h6M10 11h6M10 15h4"/>
+      </svg>
+      News
+    </button>
+    <button class="nav-item" onclick="showTab('stats')" id="nav-stats">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+      </svg>
+      Stats
+    </button>
+    <button class="nav-item" onclick="showTab('settings')" id="nav-settings">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+      </svg>
+      Settings
+    </button>
+  </nav>
+
+  <!-- AI CHAT PANEL -->
+  <div class="notif-overlay" id="chatPanel" onclick="closeChatPanel()" style="align-items:flex-end">
+    <div onclick="event.stopPropagation()" style="width:100%;max-width:430px;background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-lg) var(--radius-lg) 0 0;overflow:hidden;display:flex;flex-direction:column;height:72vh;">
+      <div style="padding:14px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="ai-dot" style="width:8px;height:8px"></div>
+          <span style="font-size:15px;font-weight:700;color:var(--text)">Ask Claude AI</span>
+        </div>
+        <span onclick="closeChatPanel()" style="font-size:18px;cursor:pointer;color:var(--text2)">✕</span>
+      </div>
+      <div id="chatMessages" style="flex:1;overflow-y:auto;padding:14px;scrollbar-width:none"></div>
+      <div style="padding:10px 12px;border-top:1px solid var(--border);display:flex;gap:8px">
+        <input id="chatInput" type="text" placeholder="Ask about captain, transfers, boosters…" onkeydown="if(event.key==='Enter')sendChatMessage()" style="flex:1;background:var(--bg3);border:1px solid var(--border2);border-radius:20px;padding:9px 14px;font-size:13px;color:var(--text);outline:none;font-family:'Inter',sans-serif;">
+        <button onclick="sendChatMessage()" style="background:var(--gold);border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">➤</button>
+      </div>
+      <div style="padding:4px 14px 12px;display:flex;gap:6px;flex-wrap:wrap">
+        <span onclick="document.getElementById('chatInput').value='Who should I captain today?'" style="font-size:11px;background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:4px 10px;cursor:pointer;color:var(--text2)">Best captain?</span>
+        <span onclick="document.getElementById('chatInput').value='Should I use my booster today?'" style="font-size:11px;background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:4px 10px;cursor:pointer;color:var(--text2)">Use booster?</span>
+        <span onclick="document.getElementById('chatInput').value='Who should I transfer in this week?'" style="font-size:11px;background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:4px 10px;cursor:pointer;color:var(--text2)">Best transfer?</span>
+        <span onclick="document.getElementById('chatInput').value='Which defender is the safest pick?'" style="font-size:11px;background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:4px 10px;cursor:pointer;color:var(--text2)">Safe defender?</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTIFICATION OVERLAY -->
+  <div class="notif-overlay" id="notifOverlay" onclick="toggleNotifications()">
+    <div class="notif-panel" onclick="event.stopPropagation()">
+      <div class="notif-panel-header">
+        <div class="notif-panel-title">Notifications</div>
+        <div class="notif-close" onclick="toggleNotifications()">✕</div>
+      </div>
+      <div id="notifList"></div>
+    </div>
+  </div>
+
+  <!-- ASK CLAUDE FAB -->
+  <button onclick="openChatPanel()" style="
+    position:fixed;bottom:90px;right:calc(50% - 215px);
+    width:52px;height:52px;
+    background:linear-gradient(135deg,#1a6b3a,#F5A623);
+    border:none;border-radius:50%;cursor:pointer;
+    font-size:22px;z-index:99;
+    box-shadow:0 4px 16px rgba(245,166,35,0.4);
+    display:flex;align-items:center;justify-content:center;
+    transition:transform 0.15s;
+  " onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">🤖</button>
+
+</div>
+
+<script>
+// ================= DATA =================
+
+const PLAYERS = [
+  // GK
+  { id:1, name:"Courtois", nation:"Belgium 🇧🇪", pos:"GK", emoji:"🧤", score:82, price:5.5, status:"green", flags:["form"], captain:false, vice:false, bench:false },
+  { id:2, name:"Alisson", nation:"Brazil 🇧🇷", pos:"GK", emoji:"🧤", score:74, price:5.0, status:"green", flags:[], captain:false, vice:false, bench:true },
+  // DEF
+  { id:3, name:"T. Alexander-Arnold", nation:"England 🏴󠁧󠁢󠁥󠁮󠁧󠁿", pos:"DEF", emoji:"🏴󠁧󠁢󠁥󠁮󠁧󠁿", score:88, price:7.5, status:"green", flags:["form","fixture"], captain:false, vice:false, bench:false },
+  { id:4, name:"Theo Hernández", nation:"France 🇫🇷", pos:"DEF", emoji:"🇫🇷", score:85, price:7.0, status:"green", flags:["form"], captain:false, vice:false, bench:false },
+  { id:5, name:"Rúben Dias", nation:"Portugal 🇵🇹", pos:"DEF", emoji:"🇵🇹", score:83, price:6.5, status:"green", flags:[], captain:false, vice:false, bench:false },
+  { id:6, name:"Koundé", nation:"France 🇫🇷", pos:"DEF", emoji:"🇫🇷", score:79, price:6.0, status:"green", flags:[], captain:false, vice:false, bench:false },
+  { id:7, name:"Lisandro M.", nation:"Argentina 🇦🇷", pos:"DEF", emoji:"🇦🇷", score:75, price:5.5, status:"yellow", flags:["yellow"], captain:false, vice:false, bench:true },
+  // MID
+  { id:8, name:"Bellingham", nation:"England 🏴󠁧󠁢󠁥󠁮󠁧󠁿", pos:"MID", emoji:"🏴󠁧󠁢󠁥󠁮󠁧󠁿", score:93, price:10.5, status:"green", flags:["form","fixture"], captain:false, vice:true, bench:false },
+  { id:9, name:"Vinicius Jr.", nation:"Brazil 🇧🇷", pos:"MID", emoji:"🇧🇷", score:91, price:11.0, status:"green", flags:["form"], captain:false, vice:false, bench:false },
+  { id:10, name:"Pedri", nation:"Spain 🇪🇸", pos:"MID", emoji:"🇪🇸", score:88, price:9.0, status:"green", flags:["form"], captain:false, vice:false, bench:false },
+  { id:11, name:"Salah", nation:"Egypt 🇪🇬", pos:"MID", emoji:"🇪🇬", score:86, price:10.0, status:"green", flags:[], captain:false, vice:false, bench:true },
+  // FWD
+  { id:12, name:"Mbappé", nation:"France 🇫🇷", pos:"FWD", emoji:"🇫🇷", score:97, price:13.0, status:"green", flags:["form","fixture"], captain:true, vice:false, bench:false },
+  { id:13, name:"Messi", nation:"Argentina 🇦🇷", pos:"FWD", emoji:"🇦🇷", score:95, price:12.5, status:"green", flags:["form"], captain:false, vice:false, bench:false },
+  { id:14, name:"Haaland", nation:"Norway 🇳🇴", pos:"FWD", emoji:"🇳🇴", score:90, price:12.0, status:"green", flags:["form","fixture"], captain:false, vice:false, bench:false },
+  { id:15, name:"Osimhen", nation:"Nigeria 🇳🇬", pos:"FWD", emoji:"🇳🇬", score:80, price:8.0, status:"yellow", flags:["rotation"], captain:false, vice:false, bench:true },
+];
+
+const NEWS = [
+  { id:1, tag:"injury", tagLabel:"🤕 Injury", headline:"Leroy Sané doubtful for Germany's group stage clash — rotation likely", source:"BBC Sport", time:"12 min ago", impact:"⚠️ Sané likely to miss vs Morocco. Sell before deadline at 2:34pm.", type:"injury" },
+  { id:2, tag:"lineup", tagLabel:"📋 Lineup", headline:"Deschamps confirms Mbappé starts — triple captain play confirmed", source:"L'Equipe", time:"28 min ago", impact:"✅ Mbappé confirmed starter vs Tunisia. Triple captain strongly backed.", type:"lineup" },
+  { id:3, tag:"match", tagLabel:"⚽ Match", headline:"Argentina 2-1 Morocco: Messi scores brace, assists one — 18 pts", source:"FIFA", time:"1 hr ago", impact:"⭐ Messi delivered. Keep him for the next round.", type:"match" },
+  { id:4, tag:"transfer", tagLabel:"↕ Transfer", headline:"Bukayo Saka prices rising fast — England fixture too good to miss", source:"Fantasy Expert", time:"2 hr ago", impact:"📈 Saka ownership up 14% today. Price may rise tomorrow.", type:"transfer" },
+  { id:5, tag:"lineup", tagLabel:"📋 Lineup", headline:"Bellingham starts for England — set to captain his side vs Panama", source:"Sky Sports", time:"2 hr ago", impact:"✅ Bellingham is a lock. Vice-captain approved.", type:"lineup" },
+  { id:6, tag:"injury", tagLabel:"🤕 Injury", headline:"Neymar OUT — Brazil vs Cameroon with Vini as main attacking threat", source:"ESPN", time:"3 hr ago", impact:"⚠️ Neymar ruled out. Vinicius Jr price expected to spike.", type:"injury" },
+  { id:7, tag:"match", tagLabel:"⚽ Match", headline:"France 3-0 Poland: Mbappé hat-trick — 24 fantasy points", source:"UEFA", time:"Yesterday", impact:"🔥 Mbappé in sensational form. Keep as captain through group stages.", type:"match" },
+  { id:8, tag:"transfer", tagLabel:"↕ Transfer", headline:"Harry Kane underperforming — consider selling before price drops", source:"Fantasy Expert", time:"Yesterday", impact:"📉 Kane 0 goals in 2 games. Haaland/Osimhen better options.", type:"transfer" },
+];
+
+const NOTIFICATIONS = [
+  { ico:"🚨", title:"Injury alert: Leroy Sané", body:"Sané is doubtful for Germany vs Morocco. Transfer him out before the 2:34pm deadline.", time:"12 min ago", unread:true },
+  { ico:"✅", title:"Lineup confirmed: Mbappé starts", body:"Kylian Mbappé is in the starting XI. Your triple captain pick is locked in.", time:"28 min ago", unread:true },
+  { ico:"⭐", title:"Today's squad is ready", body:"Your AI-recommended squad for Day 12 has been generated. Mbappé captain with 4-3-3 formation.", time:"6:00 AM", unread:true },
+  { ico:"⚽", title:"Match result: Argentina 2-1 Morocco", body:"Messi scored twice! Your players earned 42 combined points in this match.", time:"1 hr ago", unread:false },
+  { ico:"📈", title:"Price rise alert: Bukayo Saka", body:"Saka's price may rise tomorrow. Transfer him in now to save $0.5M.", time:"2 hr ago", unread:false },
+  { ico:"⚠️", title:"Deadline in 2 hours 34 mins", body:"Make your transfers before the 2:34pm deadline for today's matchday.", time:"2 hr ago", unread:false },
+];
+
+const MATCHES = [
+  { home:"France 🇫🇷", away:"Tunisia 🇹🇳", scoreH:2, scoreA:0, status:"LIVE", minute:"67'", myPlayers:"Mbappé, Theo H., Koundé" },
+  { home:"England 🏴󠁧󠁢󠁥󠁮󠁧󠁿", away:"Panama 🇵🇦", scoreH:null, scoreA:null, status:"Today 17:00", minute:"", myPlayers:"Bellingham, TAA" },
+  { home:"Brazil 🇧🇷", away:"Cameroon 🇨🇲", scoreH:null, scoreA:null, status:"Today 20:00", minute:"", myPlayers:"Vinicius Jr., Alisson" },
+  { home:"Norway 🇳🇴", away:"Mexico 🇲🇽", scoreH:null, scoreA:null, status:"Tomorrow 17:00", minute:"", myPlayers:"Haaland" },
+];
+
+// ================= NAVIGATION =================
+
+function showTab(tab) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('screen-' + tab).classList.add('active');
+  document.getElementById('nav-' + tab).classList.add('active');
+  if(tab === 'squad') renderPitch();
+  if(tab === 'stats') renderStats('my');
+  if(tab === 'news') renderNews('all');
+}
+
+// ================= RENDER PLAYERS =================
+
+function posClass(pos) {
+  return { GK:'pos-gk', DEF:'pos-def', MID:'pos-mid', FWD:'pos-fwd' }[pos] || 'pos-mid';
+}
+
+function renderPlayerCard(p) {
+  const capBadge = p.captain ? `<div class="captain-badge">C</div>` : (p.vice ? `<div class="vice-badge">V</div>` : '');
+  const flags = p.flags.map(f => {
+    const map = { injury:'flag-injury', yellow:'flag-yellow', rotation:'flag-rotation', form:'flag-form', fixture:'flag-fixture' };
+    const labels = { injury:'Injury risk', yellow:'Yellow card', rotation:'Rotation risk', form:'In form', fixture:'Great fixture' };
+    return `<span class="flag ${map[f] || ''}">${labels[f] || f}</span>`;
+  }).join('');
+  return `
+    <div class="player-card ${p.captain?'captain':''} ${p.vice?'vice':''}">
+      <div class="player-avatar">
+        ${p.emoji}
+        ${capBadge}
+      </div>
+      <div class="player-info">
+        <div class="player-name">${p.name}</div>
+        <div class="player-sub">
+          <span class="player-nation">${p.nation}</span>
+          <span class="pos-badge ${posClass(p.pos)}">${p.pos}</span>
+        </div>
+        ${flags ? `<div class="flags">${flags}</div>` : ''}
+      </div>
+      <div class="player-right">
+        <div class="player-score">${p.score}</div>
+        <div class="player-price">$${p.price}M</div>
+        <div class="status-dot ${p.status}"></div>
+      </div>
+    </div>`;
+}
+
+function renderStartingXI() {
+  const xi = PLAYERS.filter(p => !p.bench);
+  document.getElementById('startingXIList').innerHTML = xi.map(renderPlayerCard).join('');
+}
+
+function renderBench() {
+  const bench = PLAYERS.filter(p => p.bench);
+  document.getElementById('benchList').innerHTML = bench.map(renderPlayerCard).join('');
+}
+
+function renderFullSquad() {
+  document.getElementById('fullSquadList').innerHTML = PLAYERS.map(renderPlayerCard).join('');
+}
+
+// ================= FORMATION PITCH =================
+
+function renderPitch() {
+  const rows = [
+    ['Mbappé', 'Haaland', 'Messi'],
+    ['Bellingham', 'Pedri', 'Vinicius Jr.'],
+    ['TAA', 'Theo H.', 'Dias', 'Koundé'],
+    ['Courtois']
+  ];
+  const scores = { 'Mbappé':97, 'Haaland':90, 'Messi':95, 'Bellingham':93, 'Pedri':88, 'Vinicius Jr.':91, 'TAA':88, 'Theo H.':85, 'Dias':83, 'Koundé':79, 'Courtois':82 };
+  let html = '';
+  rows.forEach(row => {
+    html += `<div class="pitch-row">`;
+    row.forEach(name => {
+      const isCap = name === 'Mbappé';
+      html += `
+        <div class="pitch-player">
+          <div class="pitch-avatar ${isCap ? 'captain-a' : ''}">
+            ⚽
+            ${isCap ? '<div class="pitch-captain-b">C</div>' : ''}
+          </div>
+          <div class="pitch-name">${name}</div>
+          <div class="pitch-score-sm">${scores[name] || 80}</div>
+        </div>`;
+    });
+    html += `</div>`;
+  });
+  // Bench row
+  const bench = ['Alisson','Lisandro M.','Salah','Osimhen'];
+  html += `<div style="padding:8px 12px 4px;border-top:1px dashed rgba(255,255,255,0.15);margin-top:4px">
+    <div style="font-size:9px;color:rgba(255,255,255,0.4);text-align:center;margin-bottom:6px;letter-spacing:0.08em;text-transform:uppercase">Bench</div>
+    <div class="pitch-row">`;
+  bench.forEach(name => {
+    html += `<div class="pitch-player" style="opacity:0.6">
+      <div class="pitch-avatar" style="width:34px;height:34px;font-size:13px">⚽</div>
+      <div class="pitch-name" style="font-size:8px">${name}</div>
+    </div>`;
+  });
+  html += '</div></div>';
+  document.getElementById('pitchField').innerHTML = html;
+  renderFullSquad();
+}
+
+// ================= NEWS =================
+
+function renderNews(filter) {
+  const filtered = filter === 'all' ? NEWS : NEWS.filter(n => n.type === filter);
+  const highlights = NEWS.slice(0, 3);
+  document.getElementById('newsHighlights').innerHTML = highlights.map(n => `
+    <div class="news-highlight-card">
+      <div class="nhl-emoji">${{injury:'🤕',lineup:'📋',match:'⚽',transfer:'↕',general:'📰'}[n.type]||'📰'}</div>
+      <div class="nhl-text">${n.headline.substring(0,60)}…</div>
+      <div class="nhl-sub">${n.time}</div>
+    </div>`).join('');
+  document.getElementById('newsFeed').innerHTML = filtered.map(n => `
+    <div class="news-card">
+      <div class="news-tag tag-${n.tag}">${n.tagLabel}</div>
+      <div class="news-headline">${n.headline}</div>
+      <div class="news-meta">
+        <span class="news-source">${n.source}</span>
+        <span class="news-time">${n.time}</span>
+      </div>
+      <div class="news-impact" id="ni-${n.id}"><span class="impact-icon">💡</span><span>${n.impact}</span></div>
+      <div style="text-align:right;margin-top:6px">
+        <span onclick="analyzeNewsItem(${NEWS.indexOf(n)})" style="font-size:11px;color:var(--gold);cursor:pointer;font-weight:600">Ask Claude for impact ›</span>
+      </div>
+    </div>`).join('');
+}
+
+function filterNews(type, el) {
+  document.querySelectorAll('#screen-news .tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  renderNews(type);
+}
+
+function fetchNews() {
+  const btn = event.target;
+  btn.textContent = '↻ Loading…';
+  setTimeout(() => { btn.textContent = '↻ Refresh'; renderNews('all'); }, 1200);
+}
+
+// ================= STATS =================
+
+function renderStats(filter) {
+  let players = [...PLAYERS];
+  if(filter === 'my') players = PLAYERS;
+  else if(filter === 'gk') players = PLAYERS.filter(p => p.pos === 'GK');
+  else if(filter === 'def') players = PLAYERS.filter(p => p.pos === 'DEF');
+  else if(filter === 'mid') players = PLAYERS.filter(p => p.pos === 'MID');
+  else if(filter === 'fwd') players = PLAYERS.filter(p => p.pos === 'FWD');
+  else players = [...PLAYERS].sort((a,b) => b.score - a.score);
+
+  const statsConfig = {
+    GK: [['Form',85,'bar-gold'],['Clean sheets',70,'bar-green'],['Save %',80,'bar-blue']],
+    DEF: [['Form',75,'bar-gold'],['Clean sheet odds',65,'bar-green'],['Attack threat',50,'bar-blue']],
+    MID: [['Form',90,'bar-gold'],['Goal threat',70,'bar-blue'],['Assist chance',75,'bar-green']],
+    FWD: [['Form',95,'bar-gold'],['Goal chance',88,'bar-blue'],['Fixture ease',80,'bar-green']],
+  };
+
+  document.getElementById('statsList').innerHTML = players.slice(0,8).map(p => {
+    const bars = statsConfig[p.pos] || statsConfig.MID;
+    const scaled = bars.map(([label, base, cls]) => {
+      const val = Math.round(base * (p.score / 100) * (0.85 + Math.random()*0.3));
+      return `<div class="stat-row">
+        <div class="stat-label">${label}</div>
+        <div class="stat-bar-bg"><div class="stat-bar-fill ${cls}" style="width:${Math.min(val,100)}%"></div></div>
+        <div class="stat-val">${Math.min(val,100)}</div>
+      </div>`;
+    }).join('');
+    return `<div class="stat-card">
+      <div class="stat-card-header">
+        <div class="stat-avatar-lg">${p.emoji}</div>
+        <div class="stat-player-info">
+          <div class="stat-player-name">${p.name}</div>
+          <div class="stat-player-team">${p.nation} · ${p.pos} · $${p.price}M</div>
+        </div>
+        <div class="stat-score-lg">${p.score}</div>
+      </div>
+      <div class="stat-bars">${bars}</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('matchesList').innerHTML = MATCHES.map(m => {
+    const isLive = m.status === 'LIVE';
+    const scoreDisplay = m.scoreH !== null
+      ? `<span class="match-score ${isLive?'live':''}">${m.scoreH} - ${m.scoreA}</span>`
+      : `<span class="match-vs">${m.status}</span>`;
+    return `<div class="match-card">
+      <div class="match-row">
+        <div class="match-team">${m.home}</div>
+        ${scoreDisplay}
+        <div class="match-team right">${m.away}</div>
+      </div>
+      <div class="match-status">
+        ${isLive ? `<span class="live-dot"></span>LIVE ${m.minute}` : m.status}
+      </div>
+      <div class="match-players-imp">Your players: <strong style="color:var(--gold)">${m.myPlayers}</strong></div>
+    </div>`;
+  }).join('');
+}
+
+function filterStats(type, el) {
+  document.querySelectorAll('#screen-stats .tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  renderStats(type);
+}
+
+// ================= NOTIFICATIONS =================
+
+function renderNotifications() {
+  document.getElementById('notifList').innerHTML = NOTIFICATIONS.map(n => `
+    <div class="notif-item ${n.unread ? 'unread' : ''}">
+      <div class="notif-ico">${n.ico}</div>
+      <div class="notif-text">
+        <div class="notif-title">${n.title}</div>
+        <div class="notif-body">${n.body}</div>
+        <div class="notif-time">${n.time}</div>
+      </div>
+    </div>`).join('');
+}
+
+function toggleNotifications() {
+  const overlay = document.getElementById('notifOverlay');
+  overlay.classList.toggle('show');
+  if(overlay.classList.contains('show')) {
+    document.getElementById('notifBadge').style.display = 'none';
+    renderNotifications();
+  }
+}
+
+// ================= CLAUDE API ENGINE =================
+
+const CLAUDE_MODEL = "claude-sonnet-4-6";
+
+// Master prompt that turns raw player + news data into a fantasy decision
+function buildSquadPrompt() {
+  const playerSummary = PLAYERS.map(p =>
+    `${p.name} (${p.pos}, ${p.nation}) — Score:${p.score} Price:$${p.price}M Status:${p.status} Flags:[${p.flags.join(',')}] Bench:${p.bench}`
+  ).join('\n');
+
+  const newsSummary = NEWS.slice(0,5).map(n =>
+    `[${n.tag.toUpperCase()}] ${n.headline}`
+  ).join('\n');
+
+  return `You are an expert fantasy football analyst for the FIFA World Cup 2026.
+
+OFFICIAL FIFA WC FANTASY 2026 RULES:
+- Squad: 15 players = 2 GK, 5 DEF, 5 MID, 3 FWD | Budget: $100M (group stage)
+- Max 3 players per nation | Prices NEVER change during tournament
+- 2 free transfers per matchday; extra transfers cost -3 points each
+- ROLLING LOCKOUT: each player locks only when their country's match kicks off
+- Captain can be changed mid-round if new captain has not played yet
+- Boosters: Maximum Captain (auto 2x best scorer), Wildcard, 12th Man, Qualification Booster, Mystery Booster
+- Scoring includes goals, assists, clean sheets, shots on target, chances created, tackles, differential bonus
+
+TODAY'S PLAYER POOL:
+${playerSummary}
+
+TODAY'S NEWS:
+${newsSummary}
+
+SCORING MODEL:
+- Recent form (last 3 games): 25%
+- Fixture difficulty: 20%
+- Availability (no injury/suspension): 20%
+- Expected minutes: 15%
+- Clean sheet probability (DEF/GK): 10%
+- Captain potential: 10%
+
+IMPORTANT: First use web_search to check TODAY's actual FIFA World Cup 2026 fixtures, confirmed lineups, and latest injury news. Base your recommendation on REAL matches being played today — prioritize players whose teams play today and haven't locked yet.
+
+Your task: Analyze the data and return ONLY valid JSON (no markdown, no explanation outside JSON) in this exact structure:
+{
+  "formation": "4-3-3",
+  "totalCost": 98.4,
+  "captain": "PlayerName",
+  "viceCaptain": "PlayerName",
+  "recommendedBooster": "Triple Captain",
+  "boosterReason": "One sentence why",
+  "heroTitle": "Short punchy title for today's squad (e.g. Attack-heavy 4-3-3)",
+  "heroAnalysis": "2-3 sentence plain-English analysis explaining why this squad and captain maximize points today. Mention key fixtures, form, and risks.",
+  "transferIn": { "name": "PlayerName", "reason": "One sentence" },
+  "transferOut": { "name": "PlayerName", "reason": "One sentence" },
+  "startingXI": [
+    { "name": "PlayerName", "role": "captain|vice|normal", "keyReason": "Short reason" }
+  ],
+  "bench": [
+    { "name": "PlayerName", "keyReason": "Short reason" }
+  ],
+  "playerInsights": {
+    "PlayerName": "One-line insight for top 5 players"
+  },
+  "differentialPick": { "name": "PlayerName", "reason": "Why this is a smart differential" },
+  "riskWarning": "One sentence about the biggest risk in today's squad",
+  "actionPlan": [
+    "Step-by-step numbered actions the user must take in the official FIFA app RIGHT NOW, e.g. '1. Transfer OUT Sané, IN Saka (uses 1 free transfer)', '2. Set captain to Mbappé', '3. Activate Maximum Captain booster'. Max 5 steps. Include the deadline time if known."
+  ]
+}`;
+}
+
+// News analysis prompt — asks Claude to evaluate fantasy impact of each headline
+function buildNewsAnalysisPrompt(headline) {
+  return `You are a fantasy football expert for FIFA World Cup 2026.
+
+News headline: "${headline}"
+
+Respond with ONLY JSON (no markdown):
+{
+  "fantasyImpact": "high|medium|low",
+  "impactType": "positive|negative|neutral",
+  "actionRequired": true or false,
+  "advice": "One concrete sentence of fantasy advice based on this news",
+  "affectedPlayers": ["PlayerName1", "PlayerName2"]
+}`;
+}
+
+// Ask-Claude prompt for the chat panel
+function buildChatPrompt(userQuestion, context) {
+  const today = new Date().toLocaleDateString('en-GB', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
+  return `You are a friendly expert fantasy football assistant for FIFA World Cup 2026. Today is ${today}.
+
+Squad context:
+- Captain: ${context.captain} | Formation: ${context.formation}
+- Budget remaining: $${(100 - context.totalCost).toFixed(1)}M
+- Top scorer: ${context.topScorer}
+
+Today's known matches: ${context.todayMatches}
+Today's injury news: ${context.injuryNews}
+
+User question: "${userQuestion}"
+
+CRITICAL RULES:
+1. Use web_search to find LIVE FIFA World Cup 2026 fixture data, today's lineups, injury news, and match results before answering questions about today's matches or players.
+2. Always search before saying you don't have access to live data.
+3. Reply in plain text only — NO markdown, NO asterisks, NO hashtags, NO bold formatting.
+4. Be direct and practical. Max 4 sentences unless listing players.
+5. Always relate your answer back to fantasy points impact.`;
+}
+
+// ---- Core API caller ----
+async function callClaude(prompt, onChunk) {
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model: CLAUDE_MODEL,
+      max_tokens: 1000,
+      stream: !!onChunk,
+      messages: [{ role: "user", content: prompt }]
+    })
+  });
+
+  if (!res.ok) throw new Error(`API error ${res.status}`);
+
+  if (onChunk) {
+    // Streaming mode
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let full = "";
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      const lines = decoder.decode(value).split('\n');
+      for (const line of lines) {
+        if (line.startsWith('data: ')) {
+          try {
+            const d = JSON.parse(line.slice(6));
+            if (d.type === 'content_block_delta' && d.delta?.text) {
+              full += d.delta.text;
+              onChunk(full);
+            }
+          } catch {}
+        }
+      }
+    }
+    return full;
+  } else {
+    const data = await res.json();
+    // Handle multi-turn tool use: if Claude used web_search, send results back
+    const hasToolUse = data.content && data.content.some(b => b.type === "tool_use");
+    if (hasToolUse && data.stop_reason === "tool_use") {
+      // Build tool results and continue conversation
+      const toolResults = data.content
+        .filter(b => b.type === "tool_use")
+        .map(b => ({ type: "tool_result", tool_use_id: b.id, content: "Search completed." }));
+      const continueRes = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": key,
+          "anthropic-version": "2023-06-01",
+          "anthropic-dangerous-direct-browser-access": "true"
+        },
+        body: JSON.stringify({
+          model: CLAUDE_MODEL,
+          max_tokens: 1500,
+          tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 3 }],
+          messages: [
+            { role: "user", content: prompt },
+            { role: "assistant", content: data.content },
+            { role: "user", content: toolResults }
+          ]
+        })
+      });
+      const cont = await continueRes.json();
+      return cont.content.map(b => b.text || "").filter(Boolean).join("");
+    }
+    return data.content.map(b => b.text || "").filter(Boolean).join("");
+  }
+}
+
+// ---- Parse JSON safely from Claude response ----
+function parseJSON(text) {
+  try {
+    const clean = text.replace(/```json|```/g, '').trim();
+    // Find first { ... } block
+    const start = clean.indexOf('{');
+    const end = clean.lastIndexOf('}');
+    if (start === -1 || end === -1) return null;
+    return JSON.parse(clean.slice(start, end + 1));
+  } catch { return null; }
+}
+
+// ---- State for current AI recommendation ----
+let aiRec = null;
+
+// ---- MAIN: Refresh recommendation with real Claude call ----
+async function refreshRecommendation() {
+  const bar = document.getElementById('aiLoadingBar');
+  const heroCard = document.querySelector('.hero-card');
+  const refreshBtn = document.querySelector('.section-action[onclick*="refresh"]');
+
+  bar.style.display = 'flex';
+  bar.querySelector('span').textContent = 'Claude is analyzing today\'s fixtures and squad data…';
+  if (refreshBtn) refreshBtn.textContent = '⏳ Analyzing…';
+
+  // Animate hero card to loading state
+  heroCard.style.opacity = '0.5';
+  heroCard.style.transition = 'opacity 0.3s';
+
+  try {
+    const prompt = buildSquadPrompt();
+    let streamBuffer = "";
+
+    // Stream the response, updating loading text as chunks arrive
+    const raw = await callClaude(prompt, (partial) => {
+      streamBuffer = partial;
+      // Show live token count so user sees it's working
+      const words = partial.split(/\s+/).length;
+      bar.querySelector('span').textContent = `Claude thinking… (${words} tokens)`;
+    });
+
+    const rec = parseJSON(raw);
+
+    if (!rec) {
+      bar.querySelector('span').textContent = '⚠️ Could not parse recommendation — showing cached data';
+      setTimeout(() => { bar.style.display = 'none'; }, 3000);
+      heroCard.style.opacity = '1';
+      return;
+    }
+
+    aiRec = rec;
+
+    // ---- Apply recommendation to UI ----
+    applyRecommendation(rec);
+
+    bar.style.display = 'none';
+    heroCard.style.opacity = '1';
+    if (refreshBtn) refreshBtn.textContent = '↻ Refresh AI';
+
+    // Push a notification
+    pushNotification('✅', 'Squad updated by Claude AI', `New recommendation: ${rec.heroTitle}. Captain: ${rec.captain}.`);
+
+  } catch (err) {
+    console.error(err);
+    bar.querySelector('span').textContent = `⚠️ ${err.message} — check your API key in Settings`;
+    setTimeout(() => { bar.style.display = 'none'; }, 5000);
+    heroCard.style.opacity = '1';
+    if (refreshBtn) refreshBtn.textContent = '↻ Refresh AI';
+  }
+}
+
+// ---- Apply parsed recommendation to all UI zones ----
+function applyRecommendation(rec) {
+  // Update hero card
+  document.querySelector('.hero-title').textContent = rec.heroTitle || rec.formation;
+  document.querySelector('.ai-reason').innerHTML = `
+    <div class="ai-label"><div class="ai-dot"></div> Claude AI Analysis</div>
+    ${escHtml(rec.heroAnalysis)}`;
+
+  // Update hero meta chips
+  const metaDiv = document.querySelector('.hero-meta');
+  metaDiv.innerHTML = `
+    <div class="meta-chip">15 players selected</div>
+    <div class="meta-chip">$${rec.totalCost}M spent</div>
+    <div class="meta-chip gold">⭐ Captain: ${rec.captain}</div>
+    <div class="meta-chip">${rec.formation}</div>`;
+
+  // Update booster recommendation
+  document.querySelectorAll('.booster-card').forEach(c => {
+    c.classList.remove('recommended');
+    c.querySelector('.booster-rec-label')?.remove();
+  });
+  document.querySelectorAll('.booster-card').forEach(c => {
+    if (c.querySelector('.booster-name')?.textContent?.includes(rec.recommendedBooster)) {
+      c.classList.add('recommended');
+      if (!c.querySelector('.booster-rec-label')) {
+        const lbl = document.createElement('div');
+        lbl.className = 'booster-rec-label';
+        lbl.textContent = `★ Recommended — ${rec.boosterReason}`;
+        c.appendChild(lbl);
+      }
+    }
+  });
+
+  // Update player data based on AI rec
+  if (rec.startingXI && rec.bench) {
+    const capName = rec.captain;
+    const vcName = rec.viceCaptain;
+    const benchNames = rec.bench.map(b => b.name);
+
+    PLAYERS.forEach(p => {
+      p.captain = p.name === capName;
+      p.vice = p.name === vcName;
+      p.bench = benchNames.some(b => b.toLowerCase().includes(p.name.toLowerCase()) || p.name.toLowerCase().includes(b.toLowerCase()));
+      // Inject AI insight as a flag if available
+      if (rec.playerInsights && rec.playerInsights[p.name]) {
+        p.aiInsight = rec.playerInsights[p.name];
+      }
+    });
+  }
+
+  // Update transfer advice cards
+  if (rec.transferIn && rec.transferOut) {
+    const transferSection = document.querySelectorAll('#screen-home .news-card');
+    if (transferSection.length >= 2) {
+      transferSection[transferSection.length - 2].querySelector('.news-headline').textContent =
+        `Bring in ${rec.transferIn.name} — ${rec.transferIn.reason}`;
+      transferSection[transferSection.length - 1].querySelector('.news-headline').textContent =
+        `Sell ${rec.transferOut.name} — ${rec.transferOut.reason}`;
+    }
+  }
+
+  // Update formation badge
+  document.querySelectorAll('.formation-badge').forEach(b => b.textContent = rec.formation);
+
+  // Re-render player lists
+  renderStartingXI();
+  renderBench();
+
+  // Show risk warning if present
+  if (rec.riskWarning) {
+    showToast(`⚠️ Risk: ${rec.riskWarning}`, 6000);
+  }
+
+  // If differential pick, show toast
+  if (rec.differentialPick) {
+    setTimeout(() => showToast(`💡 Differential: ${rec.differentialPick.name} — ${rec.differentialPick.reason}`, 7000), 2000);
+  }
+
+  // Render the action checklist
+  renderActionPlan(rec);
+
+  // Auto-send to Telegram if configured
+  sendActionPlanToTelegram_silent();
+}
+
+async function sendActionPlanToTelegram_silent() {
+  if (!aiRec) return;
+  const cfg = getTelegramConfig();
+  if (!cfg.token || !cfg.chatId) return;
+  await sendTelegram(buildTelegramMessage(aiRec));
+}
+
+// ---- AI News Analysis — called when user taps "Analyze" on a news item ----
+async function analyzeNewsItem(idx) {
+  const news = NEWS[idx];
+  if (!news) return;
+
+  const card = document.querySelectorAll('#newsFeed .news-card')[idx];
+  if (!card) return;
+
+  const impactDiv = card.querySelector('.news-impact');
+  impactDiv.innerHTML = `<span class="impact-icon">⏳</span><span>Asking Claude for fantasy impact…</span>`;
+
+  try {
+    const raw = await callClaude(buildNewsAnalysisPrompt(news.headline), null);
+    const analysis = parseJSON(raw);
+
+    if (!analysis) return;
+
+    const colors = { positive:'#68D391', negative:'#FC8181', neutral:'var(--text2)' };
+    const icons  = { positive:'📈', negative:'📉', neutral:'ℹ️' };
+    const imp    = { high:'🔴 High impact', medium:'🟡 Medium', low:'🟢 Low' };
+
+    impactDiv.innerHTML = `
+      <span class="impact-icon">${icons[analysis.impactType] || '💡'}</span>
+      <span style="color:${colors[analysis.impactType]}">
+        ${imp[analysis.fantasyImpact] || ''} · ${escHtml(analysis.advice)}
+        ${analysis.affectedPlayers?.length ? ` <span style="color:var(--gold);font-weight:600">Affects: ${analysis.affectedPlayers.join(', ')}</span>` : ''}
+      </span>`;
+
+    if (analysis.actionRequired) {
+      pushNotification('🤖', `Action needed: ${news.headline.slice(0,40)}…`, analysis.advice);
+    }
+  } catch (err) {
+    impactDiv.innerHTML = `<span class="impact-icon">⚠️</span><span>${err.message}</span>`;
+  }
+}
+
+// ---- AI Chat Panel ----
+let chatHistory = [];
+
+async function sendChatMessage() {
+  const input = document.getElementById('chatInput');
+  const q = input.value.trim();
+  if (!q) return;
+  input.value = '';
+
+  chatHistory.push({ role:'user', text: q });
+  renderChat();
+
+  const todayMatches = MATCHES
+    .filter(m => m.status === 'LIVE' || m.status.toLowerCase().includes('today'))
+    .map(m => m.home + ' vs ' + m.away + ' (' + m.status + ')')
+    .join(', ') || 'Check live fixtures';
+  const injuryNews = NEWS
+    .filter(n => n.type === 'injury')
+    .slice(0,2)
+    .map(n => n.headline)
+    .join('; ') || 'No injury news';
+  const context = {
+    captain: aiRec?.captain || 'Mbappé',
+    formation: aiRec?.formation || '4-3-3',
+    totalCost: aiRec?.totalCost || 98.4,
+    topScorer: PLAYERS.reduce((a,b) => b.score > a.score ? b : a).name,
+    todayMatches,
+    injuryNews
+  };
+
+  chatHistory.push({ role:'assistant', text:'…', streaming:true });
+  renderChat();
+
+  try {
+    const raw = await callClaude(buildChatPrompt(q, context), (partial) => {
+      chatHistory[chatHistory.length - 1].text = partial;
+      chatHistory[chatHistory.length - 1].streaming = true;
+      renderChat();
+    });
+    chatHistory[chatHistory.length - 1].text = raw;
+    chatHistory[chatHistory.length - 1].streaming = false;
+    renderChat();
+  } catch (err) {
+    chatHistory[chatHistory.length - 1].text = `Error: ${err.message}`;
+    chatHistory[chatHistory.length - 1].streaming = false;
+    renderChat();
+  }
+}
+
+function renderChat() {
+  const el = document.getElementById('chatMessages');
+  if (!el) return;
+  el.innerHTML = chatHistory.map(m => `
+    <div style="display:flex;justify-content:${m.role==='user'?'flex-end':'flex-start'};margin-bottom:10px">
+      <div style="
+        max-width:85%;
+        padding:10px 13px;
+        border-radius:${m.role==='user'?'14px 14px 4px 14px':'14px 14px 14px 4px'};
+        background:${m.role==='user'?'var(--pitch)':'var(--bg3)'};
+        border:1px solid ${m.role==='user'?'rgba(255,255,255,0.1)':'var(--border)'};
+        font-size:13px;
+        line-height:1.5;
+        color:var(--text);
+        ${m.streaming?'opacity:0.8':''}
+      ">${escHtml(stripMarkdown(m.text))}</div>
+    </div>`).join('');
+  el.scrollTop = el.scrollHeight;
+}
+
+function openChatPanel() {
+  document.getElementById('chatPanel').classList.add('show');
+  if (chatHistory.length === 0) {
+    chatHistory.push({ role:'assistant', text:"Hi! I'm your Claude AI fantasy assistant. Ask me anything — captain picks, transfer advice, injury concerns, fixture analysis, or booster timing. What do you want to know?" });
+    renderChat();
+  }
+}
+
+function closeChatPanel() {
+  document.getElementById('chatPanel').classList.remove('show');
+}
+
+// ---- Notification helpers ----
+function pushNotification(ico, title, body) {
+  NOTIFICATIONS.unshift({ ico, title, body, time:'Just now', unread:true });
+  const badge = document.getElementById('notifBadge');
+  badge.style.display = 'block';
+  showToast(`${ico} ${title}`, 4000);
+}
+
+// ================= TELEGRAM ALERTS =================
+
+function getTelegramConfig() {
+  try {
+    return {
+      token: localStorage.getItem('wc26_tg_token') || '',
+      chatId: localStorage.getItem('wc26_tg_chat') || ''
+    };
+  } catch { return { token:'', chatId:'' }; }
+}
+
+function saveTelegramToken(v) {
+  try { localStorage.setItem('wc26_tg_token', v.trim()); } catch {}
+  showToast('Telegram bot token saved', 2500);
+}
+
+function saveTelegramChat(v) {
+  try { localStorage.setItem('wc26_tg_chat', v.trim()); } catch {}
+  showToast('Telegram chat ID saved', 2500);
+}
+
+async function sendTelegram(message) {
+  const cfg = getTelegramConfig();
+  if (!cfg.token || !cfg.chatId) return false;
+  try {
+    const res = await fetch(`https://api.telegram.org/bot${cfg.token}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: cfg.chatId,
+        text: message,
+        parse_mode: 'HTML',
+        disable_web_page_preview: true
+      })
+    });
+    return res.ok;
+  } catch { return false; }
+}
+
+function tgEsc(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/** Builds a clean, emoji-rich Telegram message (HTML formatting) from the current AI recommendation */
+function buildTelegramMessage(rec) {
+  const lines = [];
+  lines.push('🤖 <b>WC26 SQUAD UPDATE</b>');
+  lines.push('<i>' + tgEsc(rec.heroTitle || '') + '</i>');
+  lines.push('');
+  lines.push('🅒 <b>Captain:</b> ' + tgEsc(rec.captain) + '   🅥 <b>Vice:</b> ' + tgEsc(rec.viceCaptain || '—'));
+  lines.push('🧩 <b>Formation:</b> ' + tgEsc(rec.formation) + '   💰 <b>Spend:</b> $' + tgEsc(rec.totalCost) + 'M');
+  lines.push('⚡ <b>Booster:</b> ' + tgEsc(rec.recommendedBooster));
+  lines.push('');
+
+  const steps = rec.actionPlan || [];
+  if (steps.length) {
+    lines.push('📋 <b>DO THIS NOW</b>');
+    steps.forEach((s, i) => lines.push((i+1) + '️⃣ ' + tgEsc(s)));
+    lines.push('');
+  }
+
+  if (rec.transferIn && rec.transferOut) {
+    lines.push('🔁 <b>TRANSFER</b>');
+    lines.push('🟢 IN: ' + tgEsc(rec.transferIn.name) + ' — ' + tgEsc(rec.transferIn.reason));
+    lines.push('🔴 OUT: ' + tgEsc(rec.transferOut.name) + ' — ' + tgEsc(rec.transferOut.reason));
+    lines.push('');
+  }
+
+  if (rec.differentialPick) {
+    lines.push('💎 <b>Differential:</b> ' + tgEsc(rec.differentialPick.name) + ' — ' + tgEsc(rec.differentialPick.reason));
+  }
+
+  if (rec.riskWarning) {
+    lines.push('⚠️ <b>Risk:</b> ' + tgEsc(rec.riskWarning));
+  }
+
+  lines.push('');
+  lines.push('<a href="https://play.fifa.com/fantasy">⚽ Open FIFA Fantasy</a>');
+
+  return lines.join('\n');
+}
+
+async function testTelegram() {
+  const demo = '✅ <b>WC26 Fantasy connected!</b>\n<i>You will receive squad alerts here.</i>\n\n⚽ Powered by Claude AI';
+  const ok = await sendTelegram(demo);
+  showToast(ok ? '✅ Telegram test message sent!' : '⚠️ Failed — check token & chat ID', 4000);
+}
+
+// ================= ACTION PLAN =================
+
+function renderActionPlan(rec) {
+  let panel = document.getElementById('actionPlanCard');
+  if (!panel) {
+    // Create the action plan card and insert after hero card
+    const hero = document.querySelector('.hero-card');
+    panel = document.createElement('div');
+    panel.id = 'actionPlanCard';
+    panel.style.cssText = 'margin:10px 14px 0;background:var(--bg2);border:1px solid rgba(245,166,35,0.45);border-radius:var(--radius-lg);padding:16px;';
+    hero.parentNode.insertBefore(panel, hero.nextSibling);
+  }
+  const steps = (rec.actionPlan && rec.actionPlan.length) ? rec.actionPlan : [
+    '1. Set captain to ' + (rec.captain || 'your top pick'),
+    '2. Check the FIFA app before the next kickoff'
+  ];
+  panel.innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+      <div style="font-family:Oswald,sans-serif;font-size:15px;font-weight:700;letter-spacing:0.04em;color:var(--gold)">📋 DO THIS IN THE FIFA APP NOW</div>
+    </div>
+    ${steps.map((s,i) => `
+      <label style="display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border);cursor:pointer">
+        <input type="checkbox" onchange="this.parentNode.style.opacity=this.checked?0.45:1" style="margin-top:2px;accent-color:var(--gold);width:17px;height:17px;flex-shrink:0">
+        <span style="font-size:13px;line-height:1.45;color:var(--text)">${escHtml(s)}</span>
+      </label>`).join('')}
+    <div style="display:flex;gap:8px;margin-top:12px">
+      <button onclick="sendActionPlanToTelegram()" style="flex:1;background:#2AABEE;border:none;border-radius:8px;padding:10px;font-size:13px;font-weight:700;color:#fff;cursor:pointer;font-family:Inter,sans-serif">✈️ Send to Telegram</button>
+      <button onclick="window.open('https://play.fifa.com/fantasy','_blank')" style="flex:1;background:var(--pitch);border:none;border-radius:8px;padding:10px;font-size:13px;font-weight:700;color:#fff;cursor:pointer;font-family:Inter,sans-serif">⚽ Open FIFA Fantasy</button>
+    </div>`;
+}
+
+async function sendActionPlanToTelegram() {
+  if (!aiRec) { showToast('Run AI analysis first', 3000); return; }
+  const ok = await sendTelegram(buildTelegramMessage(aiRec));
+  showToast(ok ? '✈️ Action plan sent to Telegram!' : '⚠️ Set up Telegram in Settings first', 4000);
+}
+
+function showToast(msg, duration=3000) {
+  const existing = document.getElementById('toast');
+  if (existing) existing.remove();
+  const t = document.createElement('div');
+  t.id = 'toast';
+  t.style.cssText = `
+    position:fixed;bottom:90px;left:50%;transform:translateX(-50%);
+    background:var(--bg3);border:1px solid var(--border2);
+    border-radius:20px;padding:9px 18px;font-size:12px;font-weight:500;
+    color:var(--text);z-index:300;white-space:nowrap;
+    box-shadow:0 4px 20px rgba(0,0,0,0.4);
+    animation:slideUp 0.2s ease;max-width:360px;text-align:center;
+  `;
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), duration);
+}
+
+
+function stripMarkdown(text) {
+  return text
+    .replace(/#{1,6}\s+/g, '')           // ## headers
+    .replace(/\*\*(.+?)\*\*/g, '$1')   // **bold**
+    .replace(/\*(.+?)\*/g, '$1')         // *italic*
+    .replace(/`(.+?)`/g, '$1')            // `code`
+    .replace(/^[-*]\s+/gm, '• ')         // bullet lists
+    .replace(/\n{3,}/g, '\n\n')        // excess newlines
+    .trim();
+}
+
+function escHtml(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// ================= API KEY MANAGEMENT =================
+
+function saveApiKey(key) {
+  if (key) {
+    try { localStorage.setItem('wc26_api_key', key); } catch {}
+    showToast('API key saved — ready to analyze', 3000);
+  }
+}
+
+function getApiKey() {
+  try { return localStorage.getItem('wc26_api_key') || ''; } catch { return ''; }
+}
+
+// Override the stub callClaude defined earlier with key-injected version
+async function callClaude(prompt, onChunk) {
+  const key = getApiKey();
+  if (!key) throw new Error('No API key — add it in Settings first');
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": key,
+      "anthropic-version": "2023-06-01",
+      "anthropic-dangerous-direct-browser-access": "true"
+    },
+    body: JSON.stringify({
+      model: CLAUDE_MODEL,
+      max_tokens: 1500,
+      stream: !!onChunk,
+      tools: [{
+        type: "web_search_20250305",
+        name: "web_search",
+        max_uses: 3
+      }],
+      messages: [{ role: "user", content: prompt }]
+    })
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err?.error?.message || `API error ${res.status}`);
+  }
+  if (onChunk) {
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let full = "";
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      const lines = decoder.decode(value).split("\n");
+      for (const line of lines) {
+        if (line.startsWith("data: ")) {
+          try {
+            const d = JSON.parse(line.slice(6));
+            if (d.type === "content_block_delta" && d.delta && d.delta.text) {
+              full += d.delta.text;
+              onChunk(full);
+            }
+          } catch {}
+        }
+      }
+    }
+    return full;
+  } else {
+    const data = await res.json();
+    // Handle multi-turn tool use: if Claude used web_search, send results back
+    const hasToolUse = data.content && data.content.some(b => b.type === "tool_use");
+    if (hasToolUse && data.stop_reason === "tool_use") {
+      // Build tool results and continue conversation
+      const toolResults = data.content
+        .filter(b => b.type === "tool_use")
+        .map(b => ({ type: "tool_result", tool_use_id: b.id, content: "Search completed." }));
+      const continueRes = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": key,
+          "anthropic-version": "2023-06-01",
+          "anthropic-dangerous-direct-browser-access": "true"
+        },
+        body: JSON.stringify({
+          model: CLAUDE_MODEL,
+          max_tokens: 1500,
+          tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 3 }],
+          messages: [
+            { role: "user", content: prompt },
+            { role: "assistant", content: data.content },
+            { role: "user", content: toolResults }
+          ]
+        })
+      });
+      const cont = await continueRes.json();
+      return cont.content.map(b => b.text || "").filter(Boolean).join("");
+    }
+    return data.content.map(b => b.text || "").filter(Boolean).join("");
+  }
+}
+
+// Load saved API key into settings field
+document.addEventListener("DOMContentLoaded", () => {
+  const k = getApiKey();
+  const el = document.getElementById("apiKeyInput");
+  if (el && k) el.value = k;
+  const tg = getTelegramConfig();
+  const tEl = document.getElementById("tgTokenInput");
+  const cEl = document.getElementById("tgChatInput");
+  if (tEl && tg.token) tEl.value = tg.token;
+  if (cEl && tg.chatId) cEl.value = tg.chatId;
+});
+
+// ================= COUNTDOWN =================
+
+function startCountdown() {
+  let seconds = 2 * 3600 + 34 * 60 + 17;
+  setInterval(() => {
+    if(seconds <= 0) return;
+    seconds--;
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = seconds % 60;
+    const el = document.getElementById('countdown');
+    if(el) el.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  }, 1000);
+}
+
+// ================= INIT =================
+
+renderStartingXI();
+renderBench();
+startCountdown();
+renderNotifications();
+
+// Auto-run AI analysis when app opens (if API key configured & not run in last 2 hours)
+setTimeout(() => {
+  try {
+    const lastRun = parseInt(localStorage.getItem('wc26_last_analysis') || '0');
+    const twoHours = 2 * 60 * 60 * 1000;
+    if (getApiKey() && Date.now() - lastRun > twoHours) {
+      localStorage.setItem('wc26_last_analysis', String(Date.now()));
+      showToast('🤖 Auto-running fresh AI analysis…', 3000);
+      refreshRecommendation();
+    }
+  } catch {}
+}, 1500);
+</script>
+</body>
+</html>
